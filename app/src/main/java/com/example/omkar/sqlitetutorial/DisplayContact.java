@@ -261,7 +261,7 @@ public class DisplayContact extends ActionBarActivity {
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setData(Uri.parse("smsto:"));
         sendIntent.putExtra("address"  , phone.getText().toString());
-        sendIntent.setType("vnd.android-dir/mms-sms");
+        sendIntent.setType("text/plain");
         startActivity(Intent.createChooser(sendIntent, "Select an SMS/MMS Client:"));
     }
 
